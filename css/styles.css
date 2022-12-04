@@ -150,8 +150,24 @@ header {
 .main-info {
   background-color: var(--dark);
 
+  min-width: 1440px;
+  height: 600px;
   padding-top: 192px;
   padding-bottom: 192px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/main/hero.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
 }
 .main-text {
   color: var(--light);
@@ -164,21 +180,28 @@ header {
 .order-button {
   background-color: var(--iris);
   color: var(--light);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.04em;
+  cursor: pointer;
 
   margin: 0 auto;
   display: block;
   margin-top: 48px;
   padding: 16px 32px;
 }
+.order-button:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .order-button:focus {
   background-color: #404bbf;
   border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .features {
   padding-top: 120px;
@@ -195,6 +218,18 @@ header {
 }
 .feature {
   width: 264px;
+}
+.feature-img {
+  display: flex;
+  background-color: var(--light);
+  width: 264px;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+}
+.icon-feature {
+  width: 64px;
+  height: 64px;
 }
 .feature-title {
   font-weight: 600;
@@ -249,18 +284,16 @@ header {
 .our-team-cards {
   background-color: #fff;
 
-  /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px; */
+  border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-img {
   display: inline-block;
 }
 .our-team-name-position {
-  padding-top: 32px;
-
-  padding-bottom: 32px;
+  padding: 32px 16px;
 }
 .our-team-name {
   font-weight: 600;
@@ -275,12 +308,69 @@ header {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .our-team-cards:not(:last-child) {
   margin-right: 24px;
 }
 
+.icons {
+  display: flex;
+}
+.icons li:not(:last-child) {
+  margin-right: 24px;
+}
+.icon-social-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  border-radius: 50%;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.section-customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.customers-main-text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--dark);
+
+  margin-bottom: 72px;
+}
+
+.list-customers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customer-items:not(:last-child) {
+  margin-right: 24px;
+}
+.icon-customers {
+  fill: #8e8f99;
+  border: 2px solid #8e8f99;
+  border-radius: 7px;
+  width: 158px;
+  height: 88px;
+}
+
+.icon-customers:hover {
+  fill: var(--iris);
+  border: 2px solid var(--iris);
+}
 /* ___________________________________________Portfolio_________________ */
 
 .hero-portfolio {
@@ -288,8 +378,16 @@ header {
   padding-bottom: 120px;
 }
 .main-title {
-  color: transparent;
-  font-size: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .filters {
@@ -310,12 +408,16 @@ header {
 
   padding: 8px 16px;
 }
-.filter-button:hover {
+.button:hover {
   background-color: var(--accent);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.filter-button:focus {
+.button:focus {
   background-color: var(--iris);
   color: var(--light);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter-buttons {
   margin-right: 24px;
@@ -338,33 +440,35 @@ header {
   column-gap: 24px;
 }
 .portfolio-card {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); */
 
   display: inline-block;
+}
+.portfolio-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .card-img {
   display: inline-block;
 }
-.right-card {
+.potrfolio-card:nth-child(3n) {
   column-gap: 0px;
 }
 
-.bottom-card {
+.portfolio-card:nth-last-child(-n + 3) {
   row-gap: 0px;
 }
 .project-name-type {
   border: 0.5px solid var(--light);
-  
+
   padding-left: 16px;
   padding-bottom: 32px;
   padding-top: 32px;
-
 }
 .project-type {
   font-size: 16px;
   line-height: 1.5;
   color: var(--text);
-
 }
 .project-name {
   font-weight: 600;
@@ -381,6 +485,10 @@ footer {
   padding-top: 100px;
 
   padding-bottom: 100px;
+}
+.footer-flex {
+  display: flex;
+  align-items: start;
 }
 .footer-info {
   font-size: 16px;
@@ -400,4 +508,41 @@ footer {
   font-size: 18px;
   line-height: 1.17;
   text-transform: uppercase;
+}
+.social-footer {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+
+  margin-left: 120px;
+}
+.social-footer p {
+  margin-bottom: 16px;
+}
+
+.icons-footer {
+  display: flex;
+}
+
+.social-link-footer {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(67, 68, 85);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.icons-footer li:not(:last-child) {
+  margin-right: 16px;
+}
+.icon-footer {
+  width: 24px;
+  height: 24px;
+}
+
+.social-link-footer:hover {
+  background-color: #31d0aa;
 }
