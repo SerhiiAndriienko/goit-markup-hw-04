@@ -370,10 +370,13 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   height: 88px;
 }
 
-.icon-customers:hover {
+.icon-customers:hover,
+.icon-customers:focus {
   fill: var(--iris);
   border: 1px solid var(--iris);
+
 }
+
 /* ___________________________________________Portfolio_________________ */
 
 .hero-portfolio {
@@ -411,17 +414,14 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   padding: 8px 16px;
 }
-.button:hover {
-  background-color: var(--accent);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.button:focus {
+.button:hover, .button:focus {
   background-color: var(--iris);
-  color: var(--light);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+      color: var(--light);
+
 }
+
 .filter-buttons {
   margin-right: 24px;
 }
@@ -546,6 +546,7 @@ footer {
   height: 24px;
 }
 
-.social-link-footer:hover {
+.social-link-footer:hover, 
+.social-link-footer:focus {
   background-color: #31d0aa;
 }
