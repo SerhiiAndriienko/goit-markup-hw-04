@@ -333,6 +333,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--iris);
   border-radius: 50%;
 }
+.icon-social-team:hover, .icon-social-team:focus{
+  background-color: #31d0aa;
+
+}
 .icon {
   width: 16px;
   height: 16px;
@@ -364,18 +368,32 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .icon-customers {
   fill: #8e8f99;
-  border: 1px solid #8e8f99;
-  border-radius: 7px;
   width: 168px;
   height: 88px;
 }
 
-.icon-customers:hover,
-.icon-customers:focus {
+.icon-customers:hover{
   fill: var(--iris);
-  border: 1px solid var(--iris);
 
+    border: 1px solid var(--iris);
+  border-radius: 7px;
 }
+.customer-items a{
+    border: 1px solid #8e8f99;
+    display: flex;
+  border-radius: 7px;
+}
+
+.customer-items a:focus{
+  background-color: var(--iris);
+    border: 1px solid #8e8f99;
+  border-radius: 7px;
+  }
+
+
+
+
+
 
 /* ___________________________________________Portfolio_________________ */
 
@@ -481,6 +499,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   margin-bottom: 8px;
 }
+
 
 /* _____________________Footer_________________ */
 footer {
